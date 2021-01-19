@@ -1,0 +1,57 @@
+page {
+  .ld-tabs {
+    height: 100%;
+    .tabs {
+      width: 100vw;
+      display: flex;
+      white-space: nowrap;
+      box-sizing: border-box;
+      // position: relative;
+      background-color: #ffffff;
+      position: fixed;
+      z-index: 999;
+      box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.5);
+      top: 120px;
+      padding-top: 22px;
+      padding-bottom: 10px;
+      .scroll-bar {
+        height: 10px;
+        // background: #009C9C;
+        box-shadow: 0px 1px 4px 0px rgba(0, 156, 156, 0.5);
+        border-radius: 5px;
+        top: 35px;
+        z-index: -1;
+        transition: all 0.5s;
+        position: absolute;
+      }
+      .tab-item {
+        font-size: 34px;
+        font-family: PingFangSC-Light, PingFang SC;
+        color: #4A4A4A;
+        display: inline-block;
+        font-weight: 300;
+        margin-right: 50px;
+        max-height: 40px;
+        text-align: center;
+        line-height: 40px;
+      }
+      .tab-item:first-child {
+        margin-left: 25Px;
+      }
+      .tab-active {
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: bold;
+        position: relative;
+        transition: all 0.5s;
+      }
+    }
+    .tab-swiper {
+      width: 100vw;
+      height: 100vh;
+      .scroll-list {
+        width: 100%;
+        height: 90vh;
+      }
+    }
+  }
+}
