@@ -5,6 +5,9 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import RollupCopy from 'rollup-plugin-copy'
 import Package from '../package.json'
+import RollupJsx from 'rollup-plugin-jsx'
+import babel from 'rollup-plugin-babel'
+import resolve from "rollup-plugin-node-resolve"
 
 const resolveFile = path => NodePath.resolve(__dirname, '..', path)
 
@@ -14,7 +17,8 @@ const externalPackages = [
   '@tarojs/components',
   '@tarojs/runtime',
   '@tarojs/taro',
-  '@tarojs/react'
+  '@tarojs/react',
+  '@babel/preset-react'
 ]
 
 export default {
@@ -31,7 +35,12 @@ export default {
   ],
   // cssModules: true,
   external: externalPackages,
+  // external (id) {
+  //   return /@babel\/runtime/.test(id);
+  // },
   plugins: [
+    babel({ exclude: "**/node_modules/**", runtimeHelpers: true }),
+    resolve(),
     postcss({
       extract: false,
       modules: true,
@@ -46,6 +55,7 @@ export default {
       include: /\/node_modules\//
     }),
     RollupJson(),
+    RollupJsx({factory: 'React.createElement'}),
     RollupCopy({
       targets: [
         {

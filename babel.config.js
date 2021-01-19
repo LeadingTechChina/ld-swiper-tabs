@@ -5,6 +5,16 @@ module.exports = {
     ['taro', {
       framework: 'react',
       ts: false
-    }]
+    }],
+    // [
+    //   '@babel/plugin-transform-runtime',
+    //   {
+    //     corejs: false,
+    //     helpers: true,
+    //     regenerator: false,
+    //     useESModules: true,
+    //   },
+    // ],
+    '@babel/preset-react'
   ]
 }
