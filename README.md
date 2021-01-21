@@ -7,7 +7,7 @@
 npm install ld-swiper-tabs
 
 ## 引用
-import LdSwiperTabs from 'ld-swiper-tabs' <br>dd
+import LdSwiperTabs from 'ld-swiper-tabs' <br>
 import '@~/taro-swiper-tabs/dist/style/index.scss'     tip: @~ 当前项目的node_modules的路径
 
 ## 属性列表
