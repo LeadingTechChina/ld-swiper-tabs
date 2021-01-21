@@ -1,8 +1,8 @@
 {
-  "name": "ldswiper",
-  "version": "1.0.1",
-  "private": true,
-  "description": "111",
+  "name": "taro-swiper-tabs",
+  "version": "1.0.5",
+  "private": false,
+  "description": "taro小程序 swiper-tabs相结合的容器骨架",
   "templateInfo": {
     "name": "default",
     "typescript": false,

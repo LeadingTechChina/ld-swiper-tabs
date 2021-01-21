@@ -35,9 +35,6 @@ export default {
   ],
   // cssModules: true,
   external: externalPackages,
-  // external (id) {
-  //   return /@babel\/runtime/.test(id);
-  // },
   plugins: [
     babel({ exclude: "**/node_modules/**", runtimeHelpers: true }),
     resolve(),
